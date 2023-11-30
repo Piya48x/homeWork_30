@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Accumulator(startingValue) {
+        this.currentValue = startingValue;
+
+        this.read = function () {
+          let inputValue = +prompt("Enter a value:"); // ให้ผู้ใช้ป้อนค่าและแปลงเป็นตัวเลข
+          this.currentValue += inputValue;
+        };
+
+        this.show = function () {
+          alert(this.currentValue);
+        };
+      }
+
+      // ตัวอย่างการใช้งาน
+      const accumulator = new Accumulator(50); // สร้าง Object Accumulator ด้วย startingValue เป็น 10
+      accumulator.read(); // ให้ผู้ใช้ป้อนค่าและบวกเข้ากับ currentValue
+      accumulator.show(); // แสดงค่า currentValue ที่ alert
+    </script>
+  </body>
+</html>
